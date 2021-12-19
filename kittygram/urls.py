@@ -1,3 +1,13 @@
+# Обновлённый urls.py
+from django.urls import include, path
+
+from cats.views import CatList, CatDetail
+
+urlpatterns = [
+    path('cats/', CatList.as_view()),
+    path('cats/<int:pk>/', CatDetail.as_view()),
+]
+
 # from django.urls import include, path
 
 # from cats.views import cat_list
@@ -6,10 +16,10 @@
 #    path('cats/', cat_list),
 # ]
 
-from django.urls import include, path
+# from django.urls import include, path
 
-from cats.views import APICat
+# from cats.views import APICat
 
-urlpatterns = [
-    path('cats/', APICat.as_view()),
-]
+# urlpatterns = [
+#     path('cats/', APICat.as_view()),
+# ]
